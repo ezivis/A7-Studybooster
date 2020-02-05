@@ -1,0 +1,89 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */
+	/* color: #CC00AA; */
+}
+
+.jumbotron {
+	position: relative;
+	background: none;
+}
+
+.jumbotron:after {
+     content:"";
+     /* background: url("../images/lorempixel.jumbotron.jpeg"); */
+     opacity: 0.2;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;
+}
+.container h3 {
+	text-align:center;
+}
+#button1{
+    width: 300px;
+    height: 40px;
+	font-size: 18px;
+}
+#button2{
+    width: 300px;
+    height: 40px;
+	font-size: 18px;
+
+}
+#container{
+    text-align: center;
+}
+
+
+.task{
+	/* text-align: justify; */
+	display: flex;
+    justify-content: space-between;
+}
+.task #time_spent{
+	text-align: right;
+	font-size: 40px;
+
+}
+.task #class_assoc{
+	font-size: 40px;
+}
+.task#name{
+	font-size: 40px;
+}
+.friend{
+	display: flex;
+    justify-content: space-between;
+	font-size: 40px;
+}
+.friend #name #focus #rank{
+	font-size: 40px;
+}
+/* .jumbotron p {
+     color: #6e6e6e;
+} */
+.jumbotron h1{
+	text-align:center;
+	font-size: 60px;
+}
+.jumbotron h3{
+	text-align:center;
+	font-size: 30px;
+}
+
+.jumbotron h4{
+	text-align:center;
+	font-size: 25px;
+}
+.project a {
+     text-align: center;
+}
