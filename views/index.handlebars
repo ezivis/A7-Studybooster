@@ -6,11 +6,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="/css/introHCI.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
 
 </head>
 
 <body>
+	<div id="box">
+		<div id="footer">
 	<div class="container">
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
@@ -25,8 +27,10 @@
 		</ol> -->
 			<h4>Focus Score: 80</h4>
 
-			<h3>My Tasks</h3>
+
 		</div>
+		<div class="task_table">
+			<h3>My Tasks</h3>
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
@@ -38,8 +42,9 @@
 				</a>
 			</div>
 		{{/each}} -->
+
 		<div class="task" id="name" >
-			<a href="" class="thumbnail">
+			<a href="/task_page" class="thumbnail">
 				<p>Read</p>
 			</a>
 			<div id="class_assoc">
@@ -50,7 +55,7 @@
 			</div>
 		</div>
 		<div class="task" id="name" >
-			<a href="" class="thumbnail">
+			<a href="/task_page" class="thumbnail">
 				<p>Studied</p>
 			</a>
 			<div id="class_assoc">
@@ -61,7 +66,7 @@
 			</div>
 		</div>
 		<div class="task" id="name" >
-			<a href="" class="thumbnail">
+			<a href="/task_page" class="thumbnail">
 				<p>Homework</p>
 			</a>
 			<div id="class_assoc">
@@ -71,9 +76,12 @@
 				<p>30 Minutes</p>
 			</div>
 		</div>
+	</div>
 
 		<div id="container">
+			<a href="/add_task">
 			<button type="button home-button" id="button3" >+</button>
+			</a>
 		</div>
 
 
@@ -83,6 +91,7 @@
 			<button type="button contact-button" id="button2">Friends</button>
 			</a>
 		</div>
+	</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>

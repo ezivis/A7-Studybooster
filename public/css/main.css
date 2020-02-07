@@ -14,33 +14,27 @@
 	background: none;
 }
 
-.jumbotron:after {
-     content:"";
-     /* background: url("../images/lorempixel.jumbotron.jpeg"); */
-     opacity: 0.2;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     position: absolute;
-     z-index: -1;
+.task_table {
+	border-style: inset;
 }
 .container h3 {
 	text-align:center;
 }
 #button1{
-    width: 300px;
+	display: inline-block;
+    width: 148px;
     height: 40px;
-	font-size: 18px;
+	font-size: 15px;
 }
 #button2{
-    width: 300px;
+	display: inline-block;
+    width: 148px;
     height: 40px;
-	font-size: 18px;
+	font-size: 15px;
 
 }
 #button3{
-    width: 600px;
+    width: 300px;
     height: 40px;
 	font-size: 30px;
 
@@ -58,19 +52,19 @@
 }
 .task #time_spent{
 	text-align: right;
-	font-size: 40px;
+	font-size: 20px;
 
 }
 .task #class_assoc{
-	font-size: 40px;
+	font-size: 20px;
 }
 .task#name{
-	font-size: 40px;
+	font-size: 20px;
 }
 .friend{
 	display: flex;
     justify-content: space-between;
-	font-size: 40px;
+	font-size: 20px;
 }
 
 /* .jumbotron p {
@@ -89,6 +83,23 @@
 	text-align:center;
 	font-size: 25px;
 }
-.project a {
-     text-align: center;
+
+#footer h2{
+	text-align: center;
+	margin: 0 auto;
+	line-height: 70px;
+}
+
+#box{
+	width: 300px;
+	height: 690px;
+	margin: 0 auto;
+	border-radius: 25px;
+	border: 3px solid;
+}
+#box header{
+	text-align: center;
+}
+#box content{
+	z-index: 1;
 }
