@@ -15,6 +15,8 @@ var add = require('./routes/add');
 var friends = require('./routes/friends');
 
 var task = require('./routes/task');
+
+var stopwatch = require('./routes/stopwatch');
 // Example route
 // var user = require('./routes/user');
 
@@ -47,6 +49,7 @@ app.get('/view_friend', friends.open);
 app.get('/task_page', task.viewTask);
 app.get('/add_task',task.addTask);
 app.get('/add',add.addFriend);
+app.get('/stop_watch',stopwatch.stopWatch);
 // Example route
 // app.get('/users', user.list);
 
