@@ -10,6 +10,8 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 
+var fake = require('./routes/fake');
+
 var add = require('./routes/add');
 
 var friends = require('./routes/friends');
@@ -50,6 +52,7 @@ app.get('/task_page', task.viewTask);
 app.get('/add_task',task.addTask);
 app.get('/add',add.addFriend);
 app.get('/stop_watch',stopwatch.stopWatch);
+app.get('/fake',fake.fake);
 // Example route
 // app.get('/users', user.list);
 
