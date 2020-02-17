@@ -1,6 +1,6 @@
 Study Booster
 ====
-This project is deployed at https://studybooster-a6-version.herokuapp.com/
+This project is deployed at https://a6-studybooster.herokuapp.com/
 
 To start locally, run
 
