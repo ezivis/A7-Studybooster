@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/friends.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/dropdown.css">
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -22,69 +24,48 @@
 		<div id="footer">
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Friends</h1>
-		</div>
+<ul>
+  <li><a href="#home">Friends</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">More</a>
+    <div class="dropdown-content">
+      <a href="/">My Focus</a>
+      <a href="/friends">Friends</a>
+      <a href="/fake">Login</a>
+    </div>
+  </li>
+</ul>
 
-        <div class="friend" id="name" >
-            <div id="rank">
-				<p>#1</p>
-			</div>
-			<a href="/view_friend" class="thumbnail">
-				<p>Mark A.</p>
-			</a>
+	<div class="contact">
+    <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png">
+    <div class="info">
+<a href="/view_friend" class="thumbnail"><div class="name">Mark A.</div></a>
+      <div class="description">Focus: 100 Minutes</div>
+    </div>
+  </div>
+  
+	<div class="contact">
+    <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png">
+    <div class="info">
+	<div class="name">You</div>
+      <div class="description">Focus: 80 Minutes</div>
+    </div>
+  </div>
+  
+	<div class="contact">
+    <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png">
+    <div class="info">
+<a href="/view_friend" class="thumbnail"><div class="name">Jonny A.</div></a>
+      <div class="description">Focus: 50 Minutes</div>
+    </div>
+  </div>
 
-			<div id="focus">
-				<p>Focus: 100 Minutes</p>
-			</div>
-		</div>
-        <div class="friend" id="name" >
-            <div id="rank">
-				<p>#2</p>
-			</div>
-			<a class="thumbnail">
-				<p>You</p>
-			</a>
-
-			<div id="focus">
-				<p>Focus: 80 Minutes</p>
-			</div>
-		</div>
-        <div class="friend" id="name" >
-            <div id="rank">
-				<p>#3</p>
-			</div>
-			<a href="/view_friend" class="thumbnail">
-				<p>Jonny A.</p>
-			</a>
-
-			<div id="focus">
-				<p>Focus: 50 Minutes</p>
-			</div>
-		</div>
-        <div class="friend" id="name" >
-            <div id="rank">
-				<p>#4</p>
-			</div>
-			<a href="/view_friend" class="thumbnail">
-				<p>Max Orfield</p>
-			</a>
-
-			<div id="focus">
-				<p>Focus: 10 Minutes</p>
-			</div>
-		</div>
-        <div id="container">
-            <a href="/">
-		    <button type="button home-button" id="button1" >My Focus</button>
-            </a>
-			<a href="/friends">
-			<button type="button contact-button" id="button2">Friends</button>
-			</a>
-		</div>
-	</div>
-	</div>
-	</div>
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
+	<div class="contact">
+    <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png">
+    <div class="info">
+<a href="/view_friend" class="thumbnail"><div class="name">Max Orfield</div></a>
+      <div class="description">Focus: 10 Minutes</div>
+    </div>
+  </div>
 </body>
 </html>

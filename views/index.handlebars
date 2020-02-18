@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="/css/main.css" rel="stylesheet">
-
+	<link href="/css/focusbar.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/dropdown.css">
 </head>
 
 <body>
@@ -17,26 +18,37 @@
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
 		<div class="jumbotron">
-			<h1>Focus App</h1>
-			<!-- <p>human-computer interaction &middot; social computing &middot; crowdsourcing</p> -->
-
+<ul>
+  <li><a href="#home">My Focus</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">More</a>
+    <div class="dropdown-content">
+      <a href="/">My Focus</a>
+      <a href="/friends">Friends</a>
+      <a href="/fake">Login</a>
+    </div>
+  </li>
+</ul>
 		<!-- <ol>
 		{{#each projects}}
 			<li><a href="#{{id}}">{{name}}</a></li>
 		{{/each}}
 		</ol> -->
-			<h4>Focus Score: 80</h4>
-		<div id="container">			
-			<a href="/fake" class="thumbnail">
-			<button class="btn success">Login Here</button>
-		</a>
-		<div>			
+		
 
 
 
 		</div>
-		<div class="task_table">
-			<h4>My Tasks</h4>
+
+			<h1>My Tasks</h1>
+
+<div class="foucsbar">
+  <div class="fbar">
+    <div class="skill">Your Focus Score</div>
+    <div class="bar-outer">
+      <div class="speech-bubble photo">80</div>
+      <div class="bar-inner ph"></div>
+</div>	
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
@@ -48,7 +60,6 @@
 				</a>
 			</div>
 		{{/each}} -->
-
 		<div class="task" id="name" >
 			<a href="/task_page" class="thumbnail">
 				<p>Read</p>
@@ -103,17 +114,11 @@
 			</a>
 		</div>
 
-
-		<div id="container">
-		    <button type="button home-button" id="button1" >My Focus</button>
-			<a href="/friends">
-			<button type="button contact-button" id="button2">Friends</button>
-			</a>
-		</div>
 	</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/focusbar.js"></script>
 </body>
 </html>
