@@ -72,7 +72,14 @@
 	/* text-align: justify; */
 	display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: solid 2px rgba(149, 165, 166,0.2);
 }
+
+.task:hover {
+  background-color: #ccc;
+}
+
 .task #time_spent{
 	text-align: right;
 	font-size: 20px;
