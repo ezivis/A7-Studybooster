@@ -9,6 +9,45 @@
 	<link href="/css/main.css" rel="stylesheet">
 	<link href="/css/focusbar.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Language', 'Speakers (in millions)'],
+          ['Cogs120',     30],
+          ['Cse120',      80],
+          ['Econ120A',  70],
+          ['Cogs187B', 50],
+        ]);
+
+      var options = {
+        legend: 'none',
+        pieSliceText: 'label',
+        title: 'Focus You Did Last Week',
+        pieStartAngle: 100,
+      };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+
 </head>
 
 <body>
@@ -39,8 +78,8 @@
 
 
 		</div>
+    <div id="piechart" style="width: 300px; height: 150px;"></div>
 
-			<h1>My Tasks</h1>
 
 <div class="foucsbar">
   <div class="fbar">
@@ -49,6 +88,10 @@
       <div class="speech-bubble photo">80</div>
       <div class="bar-inner ph"></div>
 </div>	
+
+
+<button class="btn" id="hide">Hide All Task</button>
+<button class="btn121" id="show">Show All Task</button>
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
