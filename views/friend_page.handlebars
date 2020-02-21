@@ -61,12 +61,11 @@
 
 </head>
 <body>
-<div id="box">
 		<div id="footer">
 	<div class="container">
 		<div class="jumbotron">
 <ul>
-  <li><a href="#home">My Focus</a></li>
+  <li><a2>Mark A.</a2></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">More</a>
     <div class="dropdown-content">
@@ -77,39 +76,46 @@
   </li>
 </ul>
 
-
+<div class="container">
 <h4>You V.S Mark A.</h4>
-<div id="myProgress">
+<div id="myProgress" class="center12">
   <div id="myBar"></div>
 </div>
 
 <br>
-<button class="btn warning" onclick="move()">Battle</button>
+<div class="center12">
+    <div id="myBar" class="center12" style="height:24px;width:0%">
+  </div>
+
+  <p id="myP">Mark A. has <span id="demo">0</span> focus score more than you</p>
+
+  <button class="btn124" onclick="move();this.disabled='true'">Let's see who is better!</button> 
+</div>
 
 <script>
-var i = 0;
 function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 10;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 20) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-      }
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 50);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      document.getElementById("myP").className = "w3-text-green w3-animate-opacity";
+      document.getElementById("myP").innerHTML = "Mark A. Wins! He has 80 focus score more than you";
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      var num = width * 8 / 10;
+      num = num.toFixed(0)
+      document.getElementById("demo").innerHTML = num;
     }
   }
 }
 </script>
 
-<div id="chart_div" style="width: 300px; height: 200px;"></div>
-<div id="regions_div" style="width: 300px; height: 200px;"></div>
-
+<div class="center12" id="chart_div" style="width: 300px; height: 200px; "></div>
+<div class="center12" id="regions_div" style="width: 300px; height: 200px;"></div>
+<a class="btn btn-default" href="javascript: history.go(-1)">Back</a>
 </div>
 </body>
 </html>

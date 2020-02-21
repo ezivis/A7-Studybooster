@@ -9,32 +9,8 @@
 	<link href="/css/main.css" rel="stylesheet">
 	<link href="/css/focusbar.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Language', 'Speakers (in millions)'],
-          ['Cogs120',     30],
-          ['Cse120',      80],
-          ['Econ120A',  70],
-          ['Cogs187B', 50],
-        ]);
-
-      var options = {
-        legend: 'none',
-        pieSliceText: 'label',
-        title: 'Focus You Did Last Week',
-        pieStartAngle: 100,
-      };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, options);
-      }
-    </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
@@ -51,14 +27,17 @@ $(document).ready(function(){
 </head>
 
 <body>
-	<div id="box">
+
 		<div id="footer">
 	<div class="container">
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
 		<div class="jumbotron">
 <ul>
-  <li><a href="#home">My Focus</a></li>
+
+=======
+  <li><a2>{{#if user}}{{user.name}}'s {{/if}}Focus Home Page</a2></li>
+
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">More</a>
     <div class="dropdown-content">
@@ -73,13 +52,11 @@ $(document).ready(function(){
 			<li><a href="#{{id}}">{{name}}</a></li>
 		{{/each}}
 		</ol> -->
-		
+
 
 
 
 		</div>
-    <div id="piechart" style="width: 300px; height: 150px;"></div>
-
 
 <div class="foucsbar">
   <div class="fbar">
@@ -87,10 +64,11 @@ $(document).ready(function(){
     <div class="bar-outer">
       <div class="speech-bubble photo">80</div>
       <div class="bar-inner ph"></div>
+
 </div>	
 
-
-<button class="btn" id="hide">Hide All Task</button>
+<div class=taskc><h3>All of Your Tasks</h3></div>
+<div class="taskb"><button class="btn121" id="hide">Hide All Task</button>
 <button class="btn121" id="show">Show All Task</button>
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
@@ -103,53 +81,20 @@ $(document).ready(function(){
 				</a>
 			</div>
 		{{/each}} -->
-		<div class="task" id="name" >
-			<a href="/task_page" class="thumbnail">
-				<p>Read</p>
-			</a>
-			<div id="class_assoc">
-				<p>COGS 120</p>
-			</div>
-			<div id="time_spent">
-				<p>20 Minutes</p>
-			</div>
-		</div>
-		<div class="task" id="name" >
-			<a href="/task_page" class="thumbnail">
-				<p>Studied</p>
-			</a>
-			<div id="class_assoc">
-				<p>CSE 120</p>
-			</div>
-			<div id="time_spent">
-				<p>30 Minutes</p>
-			</div>
-		</div>
-		<div class="task" id="name" >
-			<a href="/task_page" class="thumbnail">
-				<p>Homework</p>
-			</a>
-			<div id="class_assoc">
-				<p>ECON 120A</p>
-			</div>
-			<div id="time_spent">
-				<p>30 Minutes</p>
-			</div>
-		</div>
 	{{#each friends}}
 		<div class="task" id="name" >
-			<a href="/task_page" class="thumbnail">
+			<a class="thumbnail">
 				<p>{{name}}</p>
 			</a>
 			<div id="class_assoc">
 				<p>{{description}}</p>
 			</div>
 			<div id="time_spent">
-				<p>{{time}}</p>
+				<p>{{time}}<span> Minutes</span></p>
 			</div>
 		</div>
 	{{/each}}
-	</div>
+	</div></div>
 
 		<div id="container">
 			<a href="/stop_watch" class="thumbnail">
@@ -157,7 +102,6 @@ $(document).ready(function(){
 			</a>
 		</div>
 
-	</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
